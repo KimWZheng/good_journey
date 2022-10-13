@@ -30,6 +30,6 @@ int main() {
         cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
         cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
     }
-    sssss
+
     return 0;
 }

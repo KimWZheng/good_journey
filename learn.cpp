@@ -3,7 +3,7 @@
 using namespace std;
  
 int main() {
- 
+    
     float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
     cout << "输入 a, b 和 c: ";
     cin >> a >> b >> c;

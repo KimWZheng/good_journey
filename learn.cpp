@@ -1,35 +1,37 @@
+#include <algorithm>        // 标准算法头文件
 #include <iostream>
-#include <cmath>
+#include <string>
+#include <vector>
+#include <functional>
 using namespace std;
- 
-int main() {
-    
-    float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
-    cout << "输入 a, b 和 c: ";
-    cin >> a >> b >> c;
-    discriminant = b*b - 4*a*c;
-    
-    if (discriminant > 0) {
-        x1 = (-b + sqrt(discriminant)) / (2*a);
-        x2 = (-b - sqrt(discriminant)) / (2*a);
-        cout << "Roots are real and different." << endl;
-        cout << "x1 = " << x1 << endl;
-        cout << "x2 = " << x2 << endl;
-    }
-    
-    else if (discriminant == 0) {
-        cout << "实根相同：" << endl;
-        x1 = (-b + sqrt(discriminant)) / (2*a);
-        cout << "x1 = x2 =" << x1 << endl;
-    }
- 
-    else {
-        realPart = -b/(2*a);
-        imaginaryPart =sqrt(-discriminant)/(2*a);
-        cout << "实根不同："  << endl;
-        cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
-        cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
-    }
 
-    return 0;
+void print01(int val)
+{
+    cout << val << endl;
+}
+
+class print02
+{
+    public:
+        void operator()(int val)
+        {
+            cout << val << endl;
+        }
+};
+
+void func()
+{
+    vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+
+    for_each(v.begin(), v.begin()+3, print01);      // 使用普通函数
+
+}
+
+int main()
+{
+    func();
 }

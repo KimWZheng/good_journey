@@ -18,7 +18,7 @@ class print02
             cout << val << endl;
         }
 };
-ssss
+
 void func()
 {
     vector<int> v;

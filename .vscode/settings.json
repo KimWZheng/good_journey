@@ -65,5 +65,11 @@
         "__tree": "cpp",
         "set": "cpp",
         "map": "cpp"
-    }
+    },
+    "code-runner.fileDirectoryAsCwd": true,
+    "python.terminal.executeInFileDir": true,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "python.pythonPath": "/usr/local/bin/python3"
 }

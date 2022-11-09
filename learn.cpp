@@ -1,4 +1,4 @@
-#include <algorithm>        // 标准算法头文件
+#include <algorithm> // 标准算法头文件
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,11 +12,11 @@ void print01(int val)
 
 class print02
 {
-    public:
-        void operator()(int val)
-        {
-            cout << val << endl;
-        }
+public:
+    void operator()(int val)
+    {
+        cout << val << endl;
+    }
 };
 
 void func()
@@ -27,8 +27,7 @@ void func()
     v.push_back(3);
     v.push_back(4);
 
-    for_each(v.begin(), v.begin()+3, print01);      // 使用普通函数
-
+    for_each(v.begin(), v.begin() + 3, print01); // 使用普通函数
 }
 
 int main()
